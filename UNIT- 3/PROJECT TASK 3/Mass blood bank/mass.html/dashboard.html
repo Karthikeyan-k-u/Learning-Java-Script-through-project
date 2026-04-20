@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="icon" href="/Mass blood bank/image.source/blood.png" type="image/png">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="/Mass blood bank/javascipt/dash.js" defer></script>
+    <link rel="stylesheet" href="/Mass blood bank/css/dash.css">  
+    <link rel="stylesheet" href="/Mass blood bank/css/load3.css">
+    <script src="/Mass blood bank/javascipt/load3.js" defer></script>
+</head>
+<body>
+    <!-- LOADING OVERLAY (shared) -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="paper-card">
+            <div class="blood-drop">
+                <i class="fas fa-tint"></i>
+                <div class="drip"></div>
+            </div>
+            <div class="loading-text">BLOOD</div>
+            <div class="sub-motto">Mass Blood Bank</div>
+            <div class="heart-line">
+                <i class="fa-regular fa-heart"></i> every drop counts <i class="fa-regular fa-heart"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="logo-area">
+            <div class="logo-icon"><i class="fas fa-droplet"></i></div>
+            <span class="logo-text">Mass Blood Bank</span>
+        </div>
+        <nav>
+            <div class="nav-item active">
+                <i class="fas fa-th-large"></i> <span>Dashboard</span>
+            </div>
+            <a href="/Mass blood bank/mass.html/home.html">
+                <div class="nav-item">
+                    <i class="fas fa-home"></i> <span>Home</span>
+                </div>
+            </a>    
+            <div class="nav-item">
+                <a href="/Mass blood bank/mass.html/events.html">
+                    <i class="fas fa-hand-holding-heart"></i> <span>Donations</span>
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="/Mass blood bank/mass.html/request form.html">
+                    <i class="fas fa-tint"></i> <span>Requests</span>
+                </a>
+            </div>
+        </nav>
+        <div class="sidebar-footer">
+            <div class="nav-item">
+                <a href="/Mass blood bank/mass.html/help.html"><i class="fas fa-question-circle"></i> <span>Help & Support</span></a>
+            </div>
+            <a href="login.html" class="nav-item" style="text-decoration: none; color: inherit; display: flex;">
+                <i class="fas fa-sign-out-alt"></i> <span>Log out</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        <!-- Top bar -->
+        <div class="top-bar">
+            <div class="page-title">
+                <h1>Welcome back, Karthik</h1>
+                <p>Here's what's happening with your donations</p>
+            </div>
+            <div class="user-profile">
+                <!-- Added id="notificationBell" for JavaScript interaction -->
+                <div class="notification-badge" id="notificationBell" data-count="3">
+                    <i class="far fa-bell"></i>
+                </div>
+                <div class="avatar">
+                    <div class="avatar-img"></div>
+                    <span class="avatar-name">Karthik</span>
+                    <i class="fas fa-chevron-down" style="font-size: 12px; color: #94a3b8;"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- KPI Cards (will be updated by JS) -->
+        <div class="kpi-grid">
+            <div class="kpi-card">
+                <div class="kpi-info">
+                    <h3>Blood Type</h3>
+                    <div class="kpi-number">B+</div>
+                </div>
+                <div class="kpi-icon"><i class="fas fa-droplet"></i></div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-info">
+                    <h3>Next eligible</h3>
+                    <div class="kpi-number">April 2</div>
+                </div>
+                <div class="kpi-icon"><i class="fas fa-calendar-alt"></i></div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-info">
+                    <h3>Total donations</h3>
+                    <div class="kpi-number">7</div>
+                </div>
+                <div class="kpi-icon"><i class="fas fa-hand-holding-heart"></i></div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-info">
+                    <h3>Lives impacted</h3>
+                    <div class="kpi-number">24</div>
+                </div>
+                <div class="kpi-icon"><i class="fas fa-heart"></i></div>
+            </div>
+        </div>
+
+        <!-- Two column section -->
+        <div class="dashboard-grid">
+            <!-- Left column: Appointments & History -->
+            <div>
+                <!-- Upcoming appointments card -->
+                <div class="card" style="margin-bottom: 24px;">
+                    <div class="card-header">
+                        <h2>Upcoming Appointments</h2>
+                        <!-- Added class="view-all-link" -->
+                        <a href="#" class="view-all-link">View all <i class="fas fa-arrow-right" style="font-size: 12px;"></i></a>
+                    </div>
+                    <div class="appointment-item">
+                        <div class="appointment-date">
+                            <span class="day">15</span>
+                            <span class="month">MAY</span>
+                        </div>
+                        <div class="appointment-details">
+                            <h4>Whole Blood Donation</h4>
+                            <p>City Donation Center • 10:30 AM</p>
+                        </div>
+                        <span class="appointment-status">Confirmed</span>
+                    </div>
+                    <div class="appointment-item">
+                        <div class="appointment-date">
+                            <span class="day">22</span>
+                            <span class="month">MAY</span>
+                        </div>
+                        <div class="appointment-details">
+                            <h4>Platelet Donation</h4>
+                            <p>Blood Bank Main • 02:00 PM</p>
+                        </div>
+                        <span class="appointment-status">Pending</span>
+                    </div>
+                </div>
+
+                <!-- Donation history card -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Recent Donations</h2>
+                        <!-- Added class="view-all-link" -->
+                        <a href="#" class="view-all-link">View all</a>
+                    </div>
+                    <table class="history-table">
+                        <thead>
+                            <tr><th>Date</th><th>Type</th><th>Location</th><th>Status</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Mar 10, 2026</td><td>Whole blood</td><td>Apollo Hospital</td><td><span class="badge-success">Completed</span></td></tr>
+                            <tr><td>Feb 2, 2026</td><td>Platelets</td><td>Donor Bus</td><td><span class="badge-success">Completed</span></td></tr>
+                            <tr><td>Jan 18, 2026</td><td>Whole blood</td><td>Govt Hospital,Chennai</td><td><span class="badge-success">Completed</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Right column: Blood stock & Urgent requests -->
+            <div>
+                <!-- Blood stock overview card -->
+                <div class="card" style="margin-bottom: 24px;">
+                    <div class="card-header">
+                        <h2>Blood Stock Levels</h2>
+                        <!-- Added class="details-link" -->
+                        <a href="#" class="details-link">Details</a>
+                    </div>
+                    <div class="blood-stock-list">
+                        <div class="blood-type-row">
+                            <span class="blood-type">O+</span>
+                            <div class="stock-bar-container"><div class="stock-bar" style="width: 80%;"></div></div>
+                            <span class="stock-value">42 units</span>
+                        </div>
+                        <div class="blood-type-row">
+                            <span class="blood-type">A+</span>
+                            <div class="stock-bar-container"><div class="stock-bar" style="width: 65%;"></div></div>
+                            <span class="stock-value">31 units</span>
+                        </div>
+                        <div class="blood-type-row">
+                            <span class="blood-type">B+</span>
+                            <div class="stock-bar-container"><div class="stock-bar" style="width: 45%;"></div></div>
+                            <span class="stock-value">18 units</span>
+                        </div>
+                        <div class="blood-type-row">
+                            <span class="blood-type">O-</span>
+                            <div class="stock-bar-container"><div class="stock-bar" style="width: 25%; background: #d97706;"></div></div>
+                            <span class="stock-value">9 units (low)</span>
+                        </div>
+                        <div class="blood-type-row">
+                            <span class="blood-type">AB+</span>
+                            <div class="stock-bar-container"><div class="stock-bar" style="width: 30%;"></div></div>
+                            <span class="stock-value">12 units</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Urgent requests / needs card -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Urgent Needs <span style="background: #fef2f2; color: #b91c1c; font-size: 12px; padding: 2px 8px; border-radius: 30px; margin-left: 8px;">4 alerts</span></h2>
+                        <!-- Added class="respond-link" -->
+                        <a href="#" class="respond-link">Respond</a>
+                    </div>
+                    <div class="urgent-requests">
+                        <div class="urgent-item">
+                            <span><i class="fas fa-hospital" style="color: #e53e3e; width: 18px;"></i> SIMS Hospital</span>
+                            <span>O- (2 units)</span>
+                        </div>
+                        <div class="urgent-item">
+                            <span><i class="fas fa-clinic-medical"></i> Kumaran Hospital</span>
+                            <span>B+ (3 units)</span>
+                        </div>
+                        <div class="urgent-item">
+                            <span><i class="fas fa-ambulance"></i> Apollo Spectra Hospital</span>
+                            <span>AB+ (1 unit)</span>
+                        </div>
+                        <div class="urgent-item" style="margin-bottom: 0;">
+                            <span><i class="fas fa-child"></i> Children's Hospital</span>
+                            <span>O+ (4 units)</span>
+                        </div>
+                    </div>
+                    <!-- Added id="urgentBloodTypeMsg" for dynamic update -->
+                    <p id="urgentBloodTypeMsg" style="margin-top: 16px; font-size: 13px; color: #4b5563; border-top: 1px dashed #e2e8f0; padding-top: 14px;">
+                        <i class="fas fa-info-circle" style="color: #3b82f6;"></i> Your blood type (O+) is urgently needed.
+                    </p>
+                </div>
+
+                <!-- Quick tip / next steps -->
+                <div style="margin-top: 24px; background: #f1f5f9; border-radius: 16px; padding: 16px; border-left: 4px solid #e53e3e;">
+                    <div style="display: flex; gap: 12px;">
+                        <i class="fas fa-lightbulb" style="color: #e53e3e; font-size: 20px;"></i>
+                        <div>
+                            <h4 style="font-weight: 600; margin-bottom: 4px;">You can donate again from May 15</h4>
+                            <p style="color: #475569; font-size: 14px;">Schedule your next appointment now and continue saving lives.</p>
+                            <!-- Added id="bookSlotBtn" -->
+                            <button id="bookSlotBtn" style="background: #e53e3e; color: white; border: none; padding: 8px 18px; border-radius: 40px; font-weight: 500; margin-top: 12px; cursor: default;">Book a slot</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

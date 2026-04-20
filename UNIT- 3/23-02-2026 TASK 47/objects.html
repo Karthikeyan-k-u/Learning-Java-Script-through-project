@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Objects</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(135deg, #7f00ff, #e100ff);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            width: 320px;
+            color: white;
+        }
+
+        button {
+            padding: 10px;
+            border-radius: 8px;
+            border: none;
+            background: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>Objects</h2>
+
+    <button onclick="showObject()">Show Object</button>
+
+    <p id="output"></p>
+</div>
+
+<script src="objects.js"></script>
+
+</body>
+</html>

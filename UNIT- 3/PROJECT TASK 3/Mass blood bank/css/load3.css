@@ -1,0 +1,159 @@
+ /* loading overlay covers everything with warm lined paper */
+    .loading-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #f9f5f0;  /* warm paper */
+      background-image: 
+        linear-gradient(rgba(200, 60, 60, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(200, 60, 60, 0.02) 1px, transparent 1px);
+      background-size: 40px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      transition: opacity 0.5s ease;
+      padding: 1rem;
+    }
+
+    .loading-overlay.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* paper card – exactly from standalone */
+    .loading-overlay .paper-card {
+      background: #ffffff;
+      width: 360px;
+      max-width: 90vw;
+      padding: 2.5rem 2rem 2.2rem;
+      border-radius: 4px 24px 4px 24px;
+      box-shadow: 
+        0 20px 30px -10px rgba(100, 30, 30, 0.4),
+        0 0 0 1px #ecc5c5 inset,
+        0 0 0 2px #fff8f0 inset;
+      text-align: center;
+      position: relative;
+      background: linear-gradient(145deg, #fffaf5, #fff);
+      transform: rotate(0.5deg);
+      animation: paperFloat 2.2s infinite alternate ease-in-out;
+    }
+
+    .loading-overlay .paper-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-width: 0 30px 30px 0;
+      border-style: solid;
+      border-color: #f0d0d0 #fff2e6 #fff2e6 #f0d0d0;
+      box-shadow: -3px 3px 5px rgba(0,0,0,0.02);
+      border-radius: 0 0 0 8px;
+    }
+
+    .loading-overlay .paper-card::after {
+      content: "";
+      position: absolute;
+      bottom: 12px;
+      left: 20px;
+      width: 40px;
+      height: 2px;
+      background: rgba(190, 50, 50, 0.15);
+      filter: blur(2px);
+      border-radius: 50%;
+    }
+
+    @keyframes paperFloat {
+      0% { transform: rotate(0.4deg) translateY(0); }
+      100% { transform: rotate(0.7deg) translateY(-6px); }
+    }
+
+    .loading-overlay .blood-drop {
+      font-size: 4rem;
+      color: #b32e2e;
+      filter: drop-shadow(0 6px 6px rgba(170, 40, 40, 0.3));
+      margin-bottom: 0.5rem;
+      position: relative;
+      display: inline-block;
+      animation: pulseDrop 1.2s infinite alternate;
+    }
+
+    @keyframes pulseDrop {
+      0% { transform: scale(1); text-shadow: 0 0 0 rgba(180,40,40,0.2); }
+      100% { transform: scale(1.08); text-shadow: 0 0 12px #c44; }
+    }
+
+    .loading-overlay .drip {
+      width: 8px;
+      height: 14px;
+      background: #b32e2e;
+      border-radius: 50%;
+      position: relative;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0.5;
+      animation: dripMove 1.6s infinite;
+    }
+
+    @keyframes dripMove {
+      0% { height: 10px; opacity: 0.3; top: -8px; }
+      50% { height: 18px; opacity: 0.7; top: 0px; }
+      100% { height: 10px; opacity: 0.3; top: -8px; }
+    }
+
+    .loading-overlay .loading-text {
+      font-size: 1.6rem;
+      font-weight: 300;
+      letter-spacing: 4px;
+      color: #6d3b3b;
+      margin: 0.75rem 0 0.25rem;
+      text-transform: uppercase;
+      font-family: 'Courier New', monospace;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 11ch;
+      margin-left: auto;
+      margin-right: auto;
+      border-right: 2px solid #b33;
+      animation: typing 1.8s steps(11) infinite, blinkCursor 1s step-end infinite;
+    }
+
+    @keyframes typing {
+      0% { width: 0ch; }
+      50% { width: 11ch; }
+      70% { width: 11ch; }
+      90% { width: 0ch; }
+      100% { width: 0ch; }
+    }
+
+    @keyframes blinkCursor {
+      0%, 100% { border-color: #b33; }
+      50% { border-color: transparent; }
+    }
+
+    .loading-overlay .sub-motto {
+      font-size: 0.9rem;
+      color: #ab7e7e;
+      background: #fcf3ea;
+      display: inline-block;
+      padding: 0.2rem 1rem;
+      border-radius: 30px;
+      margin-top: 1rem;
+      font-style: italic;
+      box-shadow: 0 2px 5px #ffe3d6;
+    }
+
+    .loading-overlay .heart-line {
+      margin-top: 1.2rem;
+      font-size: 0.75rem;
+      color: #cb9e9e;
+    }
+
+    /* ensure main content is visible after loading (default) */
+    body {
+      margin: 0;
+      /* background is handled by home.css, we keep it */
+    }

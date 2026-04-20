@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Handling</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(135deg, #1d976c, #93f9b9);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            width: 320px;
+            color: white;
+        }
+
+        input {
+            padding: 8px;
+            margin: 10px;
+            border-radius: 8px;
+            border: none;
+        }
+
+        button {
+            padding: 10px;
+            border-radius: 8px;
+            border: none;
+            background: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2 id="title">Event Handling</h2>
+
+    <button onclick="changeText()">Click</button>
+    <button onclick="changeColor()">Color</button>
+
+    <input type="text" id="name" placeholder="Enter name">
+
+    <button onclick="showName()">Show</button>
+
+    <p id="output"></p>
+</div>
+
+<script src="event-handling.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Selection</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            width: 320px;
+            color: white;
+        }
+
+        button {
+            padding: 10px;
+            border-radius: 8px;
+            border: none;
+            background: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>DOM Selection</h2>
+
+    <p class="text">Item 1</p>
+    <p class="text">Item 2</p>
+
+    <button onclick="selectItems()">Select</button>
+
+    <p id="output"></p>
+</div>
+
+<script src="dom-selection.js"></script>
+
+</body>
+</html>

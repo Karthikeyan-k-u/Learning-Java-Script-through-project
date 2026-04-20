@@ -1,0 +1,752 @@
+/* ===== RESET & BASE STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* ===== HEADER STYLES ===== */
+header {
+    background: linear-gradient(135deg, #8b0000, #ff0000);
+    color: white;
+    padding: 0.8rem 0;
+    box-shadow: 0 4px 12px rgba(183, 28, 28, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* Logo styling */
+.logo {
+    background-color: #ff0004;
+    color: white;
+    padding: 1px 1px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    gap: 10px;
+}
+
+.logo img {
+    filter: invert(1);
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+.header-container h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    flex: 1;
+    min-width: 300px;
+    margin: 0;
+}
+
+/* Navigation links */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 0.8rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+/* ===== USER MENU (FIXED DROPDOWN) ===== */
+.user-menu {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: 20px;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.user-menu:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.user-avatar {
+    font-size: 2rem;
+    color: white;
+    line-height: 1;
+    margin-right: 8px;
+    text-decoration: none;
+}
+
+.user-avatar i {
+    display: block;
+}
+
+.user-dropdown {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.user-name a {
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0.2rem 0;
+}
+
+.user-name a:hover {
+    text-decoration: underline;
+}
+
+/* Dropdown content – hidden by default */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 1000;
+    margin-top: 10px;
+}
+
+/* Show dropdown on hover over .user-menu */
+.user-menu:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid #eee;
+    transition: background 0.2s;
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #f8f9fa;
+    color: #8b0000;
+}
+
+/* Divider (optional) */
+.divider {
+    height: 1px;
+    background-color: #eee;
+    margin: 5px 0;
+}
+
+/* ===== MAIN CONTENT STYLES ===== */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+    align-items: flex-start;
+}
+
+.hero-image {
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hero-image img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+}
+
+.contact-card {
+    flex: 1;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-card h2 {
+    color: #8b0000;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.address-info,
+.contact-details {
+    margin-bottom: 25px;
+}
+
+.contact-details p {
+    margin-bottom: 15px;
+}
+
+.contact-details a {
+    color: #8b0000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
+    color: #ff0000;
+    text-decoration: underline;
+}
+
+/* Mission Section */
+.mission-section {
+    background: linear-gradient(135deg, #fff5f5, #ffe5e5);
+    padding: 40px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.mission-container h2 {
+    color: #8b0000;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.motive-content {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.motive-content h3 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.motive-content p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+/* Video Section */
+.video-section {
+    margin-bottom: 40px;
+}
+
+.video-container h2 {
+    color: #8b0000;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.video-player {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+video {
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.video-caption {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+}
+
+/* About Section */
+.about-section {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-container h2 {
+    color: #8b0000;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.quality-standards {
+    background: #fff5f5;
+    padding: 25px;
+    border-radius: 8px;
+    margin-top: 30px;
+    border-left: 4px solid #8b0000;
+}
+
+.quality-standards h3 {
+    color: #333;
+    margin-bottom: 15px;
+}
+/* Hospitals Section */
+.hospitals-section {
+    background: #f8f9fa;
+    padding: 40px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.hospitals-container h2 {
+    color: #8b0000;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+
+.section-intro {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.hospital-nav h3 {
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+}
+
+/* Updated grid: 3 columns on desktop */
+.hospital-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* 3 columns */
+    gap: 25px;
+}
+
+/* Optional: ensure all cards have the same height */
+.hospital-card {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hospital-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.hospital-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.hospital-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.hospital-card:hover .hospital-image img {
+    transform: scale(1.05);
+}
+
+.hospital-info {
+    flex: 1;                /* Pushes content to fill remaining space */
+    padding: 20px;
+}
+
+.hospital-info h4 {
+    margin-bottom: 10px;
+}
+
+.hospital-info h4 a {
+    color: #8b0000;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.hospital-info h4 a:hover {
+    color: #ff0000;
+    text-decoration: underline;
+}
+
+.hospital-info p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Responsive: 2 columns on tablets */
+@media (max-width: 900px) {
+    .hospital-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 1 column on mobile */
+@media (max-width: 600px) {
+    .hospital-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Services Section */
+.services-section {
+    margin-bottom: 40px;
+}
+
+.services-container h2 {
+    color: #8b0000;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.service-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 4px solid #8b0000;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border-top-color: #ff0000;
+}
+
+.service-card h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.service-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Hero Message */
+.hero-message {
+    background: linear-gradient(135deg, #8b0000, #ff0000);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 40px 0;
+    font-size: 1.2rem;
+}
+
+/* ===== FOOTER STYLES ===== */
+footer {
+    background: #333;
+    color: white;
+    padding: 40px 0 20px;
+    margin-top: 40px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.footer-section h3 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background: #ff0000;
+}
+
+.quick-contact p,
+.visit-info p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.social-links p {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: #ff6b6b;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #ff0000;
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.copyright {
+    color: #aaa;
+}
+
+.copyright b {
+    color: #fff;
+}
+
+.tagline {
+    color: #ff6b6b;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1024px) {
+    .header-container {
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+    }
+
+    .hero-section {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .header-container h1 {
+        font-size: 1.3rem;
+        min-width: auto;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    .user-menu {
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .mission-section,
+    .about-section,
+    .hospitals-section {
+        padding: 20px;
+    }
+
+    .hospital-grid,
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-container h1 {
+        font-size: 1.1rem;
+    }
+
+    nav a {
+        padding: 6px 8px;
+        font-size: 0.8rem;
+    }
+
+    .contact-card,
+    .motive-content,
+    .quality-standards {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 1.5rem !important;
+    }
+
+    h3 {
+        font-size: 1.2rem !important;
+    }
+}
+
+/* ===== ANIMATIONS & UTILITIES ===== */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.emergency-contact {
+    animation: pulse 2s infinite;
+}
+
+/* Loading animation for images */
+.hospital-image,
+.hero-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.hospital-image::before,
+.hero-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Accessibility improvements */
+a:focus,
+button:focus {
+    outline: 2px solid #8b0000;
+    outline-offset: 2px;
+}
+
+.skip-to-content {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #8b0000;
+    color: white;
+    padding: 8px;
+    z-index: 1001;
+    text-decoration: none;
+}
+
+.skip-to-content:focus {
+    top: 0;
+}
+
+/* Print styles */
+@media print {
+    .header-container a,
+    .user-menu,
+    .social-links,
+    video {
+        display: none;
+    }
+
+    body {
+        color: black;
+        background: white;
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+    }
+
+    .hospital-card {
+        break-inside: avoid;
+    }
+}

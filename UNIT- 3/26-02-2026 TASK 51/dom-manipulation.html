@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Manipulation</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(135deg, #ff512f, #dd2476);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            width: 350px;
+            color: white;
+        }
+
+        button {
+            padding: 10px;
+            margin: 5px;
+            border-radius: 8px;
+            border: none;
+            background: white;
+            cursor: pointer;
+        }
+
+        .highlight {
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2 id="heading">DOM Manipulation</h2>
+
+    <button onclick="changeStyle()">Change Style</button>
+    <button onclick="addText()">Add Text</button>
+
+    <p id="output"></p>
+</div>
+
+<script src="dom-manipulation.js"></script>
+
+</body>
+</html>
