@@ -12,8 +12,6 @@ This repository provides a structured, project-based approach to learning core J
 
 - [Repository Structure](#-repository-structure)
 - [Task Index & File Descriptions](#-task-index--file-descriptions)
-- [Getting Started](#-getting-started)
-- [Learning Path](#-learning-path)
 
 ## 📁 Repository Structure
 
@@ -62,31 +60,10 @@ This table outlines the purpose of each task folder and the specific files conta
 | **43** | `20-02-2026 TASK 43` | `arrow-functions.html`<br>`arrow-functions.js` | **ES6 Arrow Functions**<br><br>• `arrow-functions.html`: Accepts a number input to calculate its square.<br>• `arrow-functions.js`: Uses the concise arrow syntax `() => {}` to create a function that returns the square of a number. Highlights the implicit return feature. |
 | **44** | `20-02-2026 TASK 44` | `scope-closures.html`<br>`scope-closures.js` | **Scope & Closures**<br><br>• `scope-closures.html`: Includes a counter display and an increment button.<br>• `scope-closures.js`: Differentiates between global, function, and block scope. Implements a **closure**—an inner function that retains access to an outer function's `count` variable even after the outer function has returned. |
 
-## 🚀 Getting Started
-
-Follow these steps to run the projects locally.
-
 ### Prerequisites
 - A modern web browser (Chrome, Firefox, Safari, Edge).
 - A text editor (VS Code recommended) to view the source code.
 
-
-
-**###🎯 Learning Path**
-The tasks are structured to build knowledge incrementally. It is recommended to follow them in the order listed below.
-
-graph LR
-    A[Task 37: Intro & Console] --> B[Task 38: Variables];
-    B --> C[Task 39: Data Types & Operators];
-    C --> D[Task 40: Conditionals];
-    D --> E[Task 41: Loops];
-    E --> F[Task 42: Functions];
-    F --> G[Task 43: Arrow Functions];
-    G --> H[Task 44: Scope & Closures];
-
-
-
-
 Happy Coding! ✨
 Karthikeyan K U
-GitHub Profile : https://github.com/Karthikeyan-k-u/Learning-Java-Script-through-project
+GitHub Profile : https://github.com/Karthikeyan-k-u
