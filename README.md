@@ -15,35 +15,40 @@ This repository provides a structured, project-based approach to learning core J
 
 ## 📁 Repository Structure
 
-All projects are located within the `UNIT- 3/` directory. Each task is self-contained, containing an HTML interface and the corresponding JavaScript logic.
 Learning-Java-Script-through-project/
-└── UNIT- 3/
-├── 09-02-2026 TASK 37/ # JavaScript Introduction
-│ ├── js-intro.html
-│ └── js-intro.js
-├── 13-02-2026 TASK 38/ # Variables (var, let, const)
-│ ├── variables.html
-│ └── variables.js
-├── 16-02-2026 TASK 39/ # Data Types & Operators
-│ ├── datatypes.html
-│ └── datatypes.js
-├── 16-02-2026 TASK 40/ # Conditionals (if/else, switch)
-│ ├── conditionals.html
-│ └── conditionals.js
-├── 19-02-2026 TASK 41/ # Loops (for, while, do-while)
-│ ├── loops.html
-│ └── loops.js
-├── 19-02-2026 TASK 42/ # Functions
-│ ├── functions.html
-│ └── functions.js
-├── 20-02-2026 TASK 43/ # Arrow Functions (ES6)
-│ ├── arrow-functions.html
-│ └── arrow-functions.js
-└── 20-02-2026 TASK 44/ # Scope & Closures
-├── scope-closures.html
-└── scope-closures.js
-
-text
+└── UNIT-3/
+    │
+    ├── 09-02-2026 TASK 37/   # JavaScript Introduction
+    │   ├── js-intro.html
+    │   └── js-intro.js
+    │
+    ├── 13-02-2026 TASK 38/   # Variables (var, let, const)
+    │   ├── variables.html
+    │   └── variables.js
+    │
+    ├── 16-02-2026 TASK 39/   # Data Types & Operators
+    │   ├── datatypes.html
+    │   └── datatypes.js
+    │
+    ├── 16-02-2026 TASK 40/   # Conditionals (if/else, switch)
+    │   ├── conditionals.html
+    │   └── conditionals.js
+    │
+    ├── 19-02-2026 TASK 41/   # Loops (for, while, do-while)
+    │   ├── loops.html
+    │   └── loops.js
+    │
+    ├── 19-02-2026 TASK 42/   # Functions
+    │   ├── functions.html
+    │   └── functions.js
+    │
+    ├── 20-02-2026 TASK 43/   # Arrow Functions (ES6)
+    │   ├── arrow-functions.html
+    │   └── arrow-functions.js
+    │
+    └── 20-02-2026 TASK 44/   # Scope & Closures
+        ├── scope-closures.html
+        └── scope-closures.js
 
 ## 📋 Task Index & File Descriptions
 
@@ -65,5 +70,7 @@ This table outlines the purpose of each task folder and the specific files conta
 - A text editor (VS Code recommended) to view the source code.
 
 Happy Coding! ✨
+
 Karthikeyan K U
+
 GitHub Profile : https://github.com/Karthikeyan-k-u
